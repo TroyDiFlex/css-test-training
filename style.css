@@ -5,6 +5,18 @@
 Шрифт для 01: "Big Shoulders", sans-serif;
 */
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-shadow: 0 0 20px #ffffff;
+}
+a.login {
+  color: black;
+}
+
 body {
   background-image: url("media/photos/background-square-color-correction.png");
   background-size: 100% auto;
@@ -31,7 +43,7 @@ header {
   border-radius: 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%); /* Для Safari */
@@ -43,6 +55,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-left: 40px;
+  gap: 75px;
 }
 
 .logo {
@@ -50,6 +64,18 @@ header {
   font-family: "Stalinist One", sans-serif;
   min-width: 50px;
   min-height: 50px;
+  font-size: 25px;
+  display: flex;
+  text-shadow: 0 0 15px #ffffff;
+}
+
+.logo p {
+  display: block;
+}
+
+.logo-r {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 17px;
 }
 
 .header-links ul {
@@ -57,7 +83,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 55px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -69,6 +95,8 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-right: 40px;
+  gap: 55px;
   min-width: 150px;
   min-height: 50px;
   font-family: "Zalando Sans Expanded", sans-serif;
@@ -76,23 +104,39 @@ header {
 
 .labels {
   display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .labels img {
-  width: 30px;
-  height: 30px;
+  height: 22px;
+}
+
+.label-right {
+  display: block;
+  font-weight: lighter;
 }
 
 .header-title {
+  font-size: 7.7px;
+  letter-spacing: 1px;
   min-width: 50px;
   min-height: 50px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-title-h {
+  text-align: right;
+  display: block;
 }
 
 .header-title-p {
-  color: rgb(179, 179, 179);
+  color: rgb(211, 211, 211);
+  text-align: right;
+  display: block;
 }
 
 .content {
@@ -148,17 +192,41 @@ header {
 }
 
 .login-button {
-  min-width: 150px;
+  min-width: 100px;
   min-height: 50px;
   background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu {
   min-width: 50px;
   min-height: 50px;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
 }
 
+.menu p {
+  font-family: sans-serif;
+  font-weight: 100;
+  width: 70%;
+  height: 70%;
+  margin: 0;
+  padding: 0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-size: 20px;
+  line-height: 1;
+}
 .content-main {
   min-width: 150px;
   min-height: 300px;
@@ -171,13 +239,27 @@ header {
   position: relative;
   min-width: 150px;
   min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .card-container {
 }
 
+.mini-photo {
+  position: relative;
+}
+
 .mini-photo img {
+  display: block;
   border-radius: 32px;
+}
+
+.mini-photo-h-p-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .mini-photo-h {
@@ -187,24 +269,45 @@ header {
 }
 
 .mini-photo-zoom {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
-
 .refresh {
+  padding: 5px;
+  padding-left: 6px;
+  padding-right: 10px;
+  display: flex;
+  background-color: rgba(217, 217, 217, 0.644);
+  justify-content: space-between;
+  border-radius: 50px;
 }
 
 .refresh-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .refresh-logo {
+  background-color: white;
+  padding: 8px;
+  border-radius: 50px;
+  width: 17px;
 }
 
 .refresh-text {
+  display: block;
+  font-weight: 600;
 }
 
 .refresh-right {
 }
 
 .moonish {
+  color: rgb(120, 120, 120);
+  font-weight: 500;
+  letter-spacing: 0, 5px;
 }
 
 .big-card {
@@ -221,50 +324,96 @@ header {
 
 .big-photo-h-p-concainer {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 26px;
+  left: 35px;
+  color: white;
 }
 
 .big-photo-h {
+  font-size: 26px;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .big-photo-p {
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .big-photo-info {
   position: absolute;
+  justify-content: space-around;
   top: 180px;
-  left: 180px;
+  /* left: 180px; */
+  left: 50px;
+  width: 200px;
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 .big-photo-info-main {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.326);
+  padding: 10px;
+  border-radius: 50px;
 }
 
 .big-photo-info-main-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .big-photo-info-main-h {
+  display: block;
 }
 
 .big-photo-info-main-p {
+  display: block;
+  color: rgb(211, 211, 211);
 }
 
 .big-photo-info-main-price {
+  display: block;
+}
+
+.big-photo-info-button {
+  background-color: rgba(0, 0, 0, 0.326);
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.326);
+  border-radius: 50px;
+  font-size: 38px;
+  width: 48px;
 }
 
 .add-to-cart-container {
   position: absolute;
   bottom: 70px;
   right: 70px;
-}
-
-.add-to-cart {
+  display: flex;
+  gap: 10px;
 }
 
 .add-to-cart-main {
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 15px;
+  border-radius: 50px;
 }
 
 .add-to-cart-button {
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 15px;
+  width: 12px;
+  border-radius: 50px;
+  text-align: center;
 }
 
 footer {
