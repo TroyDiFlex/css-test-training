@@ -11,10 +11,11 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 20px #ffffff;
+  text-shadow: 0 0 3px #ffffff;
 }
 a.login {
   color: black;
+  font-weight: 600;
 }
 
 body {
@@ -106,6 +107,7 @@ header {
   display: flex;
   align-items: center;
   gap: 5px;
+  margin-right: 10px;
 }
 
 .labels img {
@@ -125,11 +127,11 @@ header {
   margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .header-title-h {
-  text-align: right;
+  text-align: end;
   display: block;
 }
 
@@ -153,11 +155,26 @@ header {
 }
 
 .content-header {
+  margin-top: 35px;
+  margin-left: 40px;
   min-width: 250px;
   min-height: 150px;
+  gap: 0px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.content-header .logo {
+  display: flex;
+  align-items: start;
+  margin-right: 150px;
+}
+
+.content-header .logo p {
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .content-logo {
@@ -170,23 +187,27 @@ header {
   min-height: 200px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 90px;
 }
 
 .number {
   margin: 0;
+  margin-top: -15px;
   font-family: "Big Shoulders", sans-serif;
   font-size: 135px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .content-review-p {
   font-family: "Zalando Sans Expanded", sans-serif;
   font-size: 8px;
   font-weight: 600;
-  width: 90px;
+  width: 130px;
 }
 
 .login {
+  margin-right: 38px;
   display: flex;
   gap: 5px;
 }
@@ -204,11 +225,11 @@ header {
 .menu {
   min-width: 50px;
   min-height: 50px;
+  border-radius: 50px;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
 }
 
 .menu p {
@@ -244,8 +265,8 @@ header {
   gap: 25px;
 }
 
-.card-container {
-}
+/* .card-container {
+} */
 
 .mini-photo {
   position: relative;
@@ -258,21 +279,40 @@ header {
 
 .mini-photo-h-p-container {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 25px;
+  left: 22px;
+  color: white;
 }
 
 .mini-photo-h {
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
 .mini-photo-p {
+  font-weight: 500;
+  margin: 0;
 }
 
 .mini-photo-zoom {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
+  padding: 13px;
+  border: none;
+  background-color: #1e1d1d;
+  border-radius: 50px;
 }
+
+.mini-photo-zoom img {
+  width: 30px;
+  height: auto;
+  filter: invert();
+}
+
 .refresh {
   padding: 5px;
   padding-left: 6px;
@@ -290,10 +330,18 @@ header {
 }
 
 .refresh-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  padding: 8px;
+  padding: 5px;
   border-radius: 50px;
-  width: 17px;
+  width: 20px;
+}
+
+.refresh-logo img {
+  width: 20px;
+  height: 20px;
 }
 
 .refresh-text {
@@ -302,6 +350,7 @@ header {
 }
 
 .refresh-right {
+  margin-right: 2px;
 }
 
 .moonish {
@@ -344,14 +393,14 @@ header {
 .big-photo-info {
   position: absolute;
   justify-content: space-around;
-  top: 180px;
-  /* left: 180px; */
-  left: 50px;
+  top: 165px;
+  left: 150px;
   width: 200px;
   height: 50px;
   color: white;
   display: flex;
   align-items: center;
+  z-index: 10; /* Чтобы текст был точно сверху */
 }
 
 .big-photo-info-main {
@@ -360,11 +409,14 @@ header {
   background-color: rgba(0, 0, 0, 0.326);
   padding: 10px;
   border-radius: 50px;
+  width: 130px;
 }
 
 .big-photo-info-main-text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .big-photo-info-main-h {
@@ -377,7 +429,11 @@ header {
 }
 
 .big-photo-info-main-price {
-  display: block;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .big-photo-info-button {
@@ -387,33 +443,36 @@ header {
   background-color: rgba(0, 0, 0, 0.326);
   border-radius: 50px;
   font-size: 38px;
-  width: 48px;
+  width: 46px;
 }
 
 .add-to-cart-container {
   position: absolute;
-  bottom: 70px;
-  right: 70px;
+  bottom: 40px;
+  right: 40px;
   display: flex;
   gap: 10px;
+  font-size: 11px;
 }
 
 .add-to-cart-main {
-  background-color: black;
+  background-color: #1e1d1d;
   color: white;
   display: block;
-  padding: 15px;
+  padding: 20px;
   border-radius: 50px;
 }
 
 .add-to-cart-button {
-  background-color: black;
+  background-color: #1e1d1d;
   color: white;
-  display: block;
+  display: flex;
   padding: 15px;
-  width: 12px;
+  width: 25px;
   border-radius: 50px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
 
 footer {
@@ -424,22 +483,126 @@ footer {
   -webkit-backdrop-filter: blur(20px) saturate(150%); /* Для Safari */
   background-color: rgba(123, 123, 123, 0.508);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Zalando Sans Expanded", sans-serif;
+}
+
+footer div {
+  display: block;
 }
 
 .footer-photo {
+  position: relative;
+  margin-left: 10px;
 }
 
 .footer-photo img {
+  width: 145px;
+  border-radius: 100px;
 }
 
 .footer-zoom {
+  position: absolute;
+  bottom: 5px;
+  right: -27px;
+  padding: 13px;
+  border: none;
+  background-color: #1e1d1d;
+  border-radius: 50px;
+  width: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-info {
+.footer-zoom img {
+  width: 30px;
+  height: auto;
+  filter: invert();
+}
+
+.footer-info-container {
+  font-size: 31px;
+  margin-left: 20px;
+}
+
+.footer-info-container div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-info-top-container {
+  display: flex;
+}
+
+.footer-info-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-info-top-c {
+  font-size: 28px;
+  margin-left: 1px;
+  padding: 0;
+  text-align: center;
+}
+
+/* .footer-info-bottom {
+}
+
+.footer-info-bottom-p {
+} */
+
+.footer-info-bottom img {
+  width: 38px;
+  height: auto;
 }
 
 .footer-links {
+  color: white;
+  font-size: 7.7px;
+  letter-spacing: 1px;
+  min-width: 50px;
+  min-height: 50px;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+  margin-bottom: 10px;
+}
+
+.footer-links-left {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  right: 10px;
+}
+
+.footer-links-right {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-button {
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 35px;
+  margin-right: 100px;
+  position: relative;
+  left: 55px;
+}
+
+.footer-button img {
+  width: 60px;
+  height: auto;
 }
